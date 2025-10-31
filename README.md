@@ -1,56 +1,31 @@
 # PrettyLogs Website
 
-Modern documentation and marketing website for PrettyLogs - a professional logging library for Node.js.
-
-## Overview
-
-This is the official website for PrettyLogs, featuring comprehensive documentation, interactive examples, and a landing page showcasing the library's capabilities. Built with modern web technologies and designed with a clean, professional aesthetic.
+Modern, monochromatic documentation and landing page for the PrettyLogs package.
 
 ## Features
 
-**Modern Stack**
-- React Router v7 for fast, modern routing
-- Tailwind CSS v4 for utility-first styling
-- Shadcn UI components for consistent design
-- Vite for blazing-fast development
-
-**Design System**
-- Sharp, angular design with no rounded corners
-- Monochromatic dark theme with subtle accents
-- Consistent spacing and typography
-- Enhanced shadows and borders for depth
-
-**Interactive Elements**
-- Copy-to-clipboard on all code examples
-- Tabbed package manager selector
-- Collapsible FAQ section
-- Animated stats fetched from GitHub and npm
-- Smooth scroll navigation
-
-**Documentation**
-- Comprehensive sidebar navigation with collapsible sections
-- Progress indicator showing reading completion
-- Smooth scroll to sections
-- Mobile-responsive design
-- Search-friendly structure
+- 🎨 **Monochromatic Dark Theme** - Inspired by zed.ai with clean grid design
+- 📱 **Responsive Design** - Works perfectly on all devices
+- ⚡ **React Router v7** - Fast, modern routing
+- 🎯 **Tailwind CSS** - Utility-first styling
+- 🧩 **Shadcn Components** - Beautiful, accessible UI components
+- 🔤 **Monospace Font** - JetBrains Mono for code aesthetics
 
 ## Tech Stack
 
-| Technology | Purpose |
-|------------|---------|
-| React Router v7 | Application routing and navigation |
-| Tailwind CSS v4 | Styling and design system |
-| Radix UI | Accessible, unstyled component primitives |
-| Lucide React | Icon library |
-| TypeScript | Type safety and developer experience |
-| Vite | Build tooling and development server |
+- **Framework**: React Router v7
+- **Styling**: Tailwind CSS v4
+- **Components**: Radix UI (via shadcn)
+- **Icons**: Lucide React
+- **Font**: JetBrains Mono
+- **Build Tool**: Vite
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18 or higher
-- Package manager: npm, yarn, pnpm, or bun
+- Node.js 18+
+- npm, yarn, pnpm, or bun
 
 ### Installation
 
@@ -60,23 +35,19 @@ npm install
 
 ### Development
 
-Start the development server:
-
 ```bash
 npm run dev
 ```
 
-The site will be available at `http://localhost:5173`
+Visit `http://localhost:5173` to view the site.
 
-### Build for Production
-
-Create an optimized production build:
+### Build
 
 ```bash
 npm run build
 ```
 
-### Preview Production Build
+### Production
 
 ```bash
 npm run start
@@ -88,87 +59,67 @@ npm run start
 prettyLogsWebsite/
 ├── app/
 │   ├── routes/
-│   │   ├── home.tsx          Landing page with features and examples
-│   │   ├── docs.tsx          Comprehensive documentation
-│   │   └── screenshot.tsx    Screenshot generation route
-│   ├── components/
-│   │   ├── ui/               Shadcn UI components
-│   │   └── CodeBlock.tsx     Syntax-highlighted code blocks
-│   ├── hooks/                Custom React hooks
-│   ├── lib/                  Utility functions
-│   ├── app.css               Global styles and theme
-│   ├── root.tsx              Root layout component
-│   └── routes.ts             Route configuration
-├── public/                   Static assets and images
-├── react-router.config.ts    React Router configuration
-└── vite.config.ts           Vite build configuration
+│   │   ├── home.tsx       # Landing page
+│   │   └── docs.tsx       # Documentation page
+│   ├── components/        # Reusable components (shadcn)
+│   ├── lib/              # Utility functions
+│   ├── app.css           # Global styles
+│   ├── root.tsx          # Root layout
+│   └── routes.ts         # Route configuration
+├── public/               # Static assets
+└── package.json
 ```
 
 ## Design Philosophy
 
-### Visual Design
+### Monochromatic Color Scheme
 
-The website employs a modern, professional design system:
+The site uses a strict monochromatic color palette:
 
-**Color Palette**
-- Background: `#0a0a0a` - Deep black for primary background
-- Card: `#111111` - Slightly elevated surface
-- Border: `#222222` - Subtle separation
-- Muted: `#1a1a1a` - Secondary surfaces
-- Foreground: `#ededed` - Primary text
-- Muted Foreground: `#888888` - Secondary text
-- Primary: `#3b82f6` - Accent color for interactive elements
+- Background: `#0a0a0a`
+- Cards: `#111111`
+- Borders: `#222222`
+- Muted: `#1a1a1a`
+- Text: `#ededed`
+- Muted Text: `#888888`
 
-**Design Principles**
-- Sharp, angular design with no rounded corners
-- Heavy use of borders (2px) for definition
-- Layered shadows for depth (md, lg, xl, 2xl)
-- Gradient backgrounds on cards for visual interest
-- Hover states with scale, color, and shadow transitions
-- Consistent spacing using Tailwind's spacing scale
+### Grid Design
+
+Inspired by zed.ai, the design features:
+
+- Subtle grid patterns for visual depth
+- Clean, geometric layouts
+- Consistent spacing and alignment
+- Minimalist aesthetic
 
 ### Typography
 
-- Primary font: System font stack for optimal performance
-- Monospace: JetBrains Mono for code blocks
-- Clear hierarchy with size and weight variations
-- Consistent line heights for readability
+- **Font**: JetBrains Mono for all text
+- **Code blocks**: Monospace with syntax awareness
+- **Hierarchy**: Clear size and weight distinctions
 
-## Key Pages
+## Pages
 
-### Landing Page (/)
+### Landing Page (`/`)
 
-The landing page includes:
-
-- Hero section with animated stats from GitHub and npm
-- Feature grid highlighting key capabilities
-- Interactive installation section with package manager tabs
-- Comparison table with competing libraries
-- Basic usage examples with copy buttons
-- Advanced feature showcase
-- Web server integration example
+- Hero section with key value proposition
+- Feature grid showcasing capabilities
+- Installation instructions
+- Code examples with screenshot placeholders
+- Advanced features showcase
 - Production best practices
-- FAQ section with expandable answers
 - Performance metrics
-- Multiple call-to-action sections
+- Call-to-action sections
 
-### Documentation (/docs)
+### Documentation (`/docs`)
 
-Comprehensive documentation featuring:
-
-- Collapsible sidebar navigation with icons
-- Active section tracking on scroll
-- Reading progress indicator
-- Quick Start guide
-- Log levels overview
+- Sidebar navigation
+- Getting started guide
 - Configuration options
-- Child loggers
-- File logging and rotation
-- Performance monitoring
-- Rich output formatting
-- Production setup guide
-- TypeScript support
-- Complete API reference
+- API reference
+- Advanced usage patterns
+- Production setup guides
+- TypeScript integration
 
 ## Customization
 
@@ -182,131 +133,32 @@ import { type RouteConfig, index, route } from "@react-router/dev/routes";
 export default [
   index("routes/home.tsx"),
   route("docs", "routes/docs.tsx"),
-  route("your-new-route", "routes/your-new-route.tsx"),
+  route("your-route", "routes/your-route.tsx"),
 ] satisfies RouteConfig;
 ```
 
-### Modifying Theme Colors
+### Updating Colors
 
-Update the theme variables in `app/app.css`:
+Edit `app/app.css` theme section:
 
 ```css
 @theme {
   --color-background: #0a0a0a;
   --color-foreground: #ededed;
-  --color-card: #111111;
-  --color-border: #222222;
-  --color-primary: #3b82f6;
+  /* ... other colors */
 }
 ```
 
-### Adding Components
+## Screenshot Placeholders
 
-Use the Shadcn CLI to add new components:
-
-```bash
-npx shadcn@latest add [component-name]
-```
-
-## Content Updates
-
-### Updating Code Examples
-
-Code examples use the `CodeBlock` component:
-
-```tsx
-<CodeBlock
-  code={`your code here`}
-  language="typescript"
-/>
-```
-
-### Adding Documentation Sections
-
-Documentation sections follow this structure:
-
-```tsx
-<section id="section-id" className="mb-16 scroll-mt-24">
-  <h2 className="text-3xl font-bold mb-4 flex items-center gap-3">
-    <Icon className="h-7 w-7" />
-    Section Title
-  </h2>
-  <p className="text-muted-foreground mb-6">
-    Section description
-  </p>
-  {/* Content here */}
-</section>
-```
-
-## API Integration
-
-The website fetches live data from external APIs:
-
-**GitHub API**
-- Endpoint: `https://api.github.com/repos/Millosaurs/prettylogs`
-- Data: Star count
-- Displayed in navigation and hero section
-
-**npm API**
-- Endpoint: `https://api.npmjs.org/downloads/point/last-month/@millosaurs/prettylogs`
-- Data: Monthly download count
-- Displayed in hero section stats
-
-## Deployment
-
-The website can be deployed to any static hosting service:
-
-**Build the site:**
-```bash
-npm run build
-```
-
-**Deploy the `build/` directory to:**
-- Vercel
-- Netlify
-- GitHub Pages
-- Cloudflare Pages
-- Any static host
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Performance
-
-The website is optimized for performance:
-
-- Code splitting with React Router
-- Lazy loading of components
-- Optimized images
-- Minimal JavaScript bundle
-- CSS purging in production
-- Fast development with Vite HMR
-
-## Contributing
-
-To contribute to the website:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+The site includes placeholder sections for screenshots from the prettylogs package. These should be replaced with actual screenshots from the `screenshots/` folder in the main prettylogs repository.
 
 ## License
 
-MIT License - see LICENSE file for details
-
-## Links
-
-- PrettyLogs Package: https://www.npmjs.com/package/@millosaurs/prettylogs
-- GitHub Repository: https://github.com/Millosaurs/prettylogs
-- Documentation: https://prettylogs.dev/docs
+MIT
 
 ## Credits
 
-Developed by Millosaurs
-Design inspiration from modern developer tools and documentation sites
+Built with ❤️ by [Millosaurs](https://github.com/Millosaurs)
+
+Inspired by [zed.ai](https://zed.dev) design philosophy

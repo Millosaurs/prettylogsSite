@@ -194,50 +194,41 @@ export default function Home() {
 
             {/* Social Proof Stats */}
             <div className="flex flex-wrap gap-8 mt-12 pt-8 border-t border-border">
-              {isLoadingStats ? (
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <TrendingUp className="h-5 w-5 animate-pulse" />
-                  <span className="text-sm">Loading stats...</span>
-                </div>
-              ) : (
-                <>
-                  {githubStars !== null && (
-                    <div className="flex items-center gap-2">
-                      <Star className="h-5 w-5 text-yellow-500" />
-                      <div>
-                        <div className="text-2xl font-bold">
-                          {githubStars.toLocaleString()}
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          GitHub Stars
-                        </div>
-                      </div>
+              {githubStars !== null && (
+                <div className="flex items-center gap-2">
+                  <Star className="h-5 w-5 text-yellow-500" />
+                  <div>
+                    <div className="text-2xl font-bold">
+                      {githubStars.toLocaleString()}
                     </div>
-                  )}
-                  {npmDownloads !== null && (
-                    <div className="flex items-center gap-2">
-                      <Download className="h-5 w-5 text-blue-500" />
-                      <div>
-                        <div className="text-2xl font-bold">
-                          {npmDownloads.toLocaleString()}
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          Monthly Downloads
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                  <div className="flex items-center gap-2">
-                    <Users className="h-5 w-5 text-green-500" />
-                    <div>
-                      <div className="text-2xl font-bold">1,000+</div>
-                      <div className="text-xs text-muted-foreground">
-                        Active Users
-                      </div>
+                    <div className="text-xs text-muted-foreground">
+                      GitHub Stars
                     </div>
                   </div>
-                </>
+                </div>
               )}
+              {npmDownloads !== null && (
+                <div className="flex items-center gap-2">
+                  <Download className="h-5 w-5 text-blue-500" />
+                  <div>
+                    <div className="text-2xl font-bold">
+                      {npmDownloads.toLocaleString()}
+                    </div>
+                    <div className="text-xs text-muted-foreground">
+                      Monthly Downloads
+                    </div>
+                  </div>
+                </div>
+              )}
+              <div className="flex items-center gap-2">
+                <Users className="h-5 w-5 text-green-500" />
+                <div>
+                  <div className="text-2xl font-bold">1,000+</div>
+                  <div className="text-xs text-muted-foreground">
+                    Active Users
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
